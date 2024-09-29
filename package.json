@@ -1,6 +1,6 @@
 {
-  "name": "dumi",
-  "version": "2.4.12",
+  "name": "@dz-web/dumi",
+  "version": "2.5.0",
   "description": "📖 Documentation Generator of React Component",
   "keywords": [
     "generator",
@@ -24,7 +24,9 @@
   "license": "MIT",
   "main": "dist/index.js",
   "types": "index.d.ts",
-  "bin": "./bin/dumi.js",
+  "bin": {
+    "docs-dumi": "./bin/dumi.js"
+  },
   "files": [
     "bin",
     "dist",
@@ -189,15 +191,16 @@
     "react": ">=16.8",
     "react-dom": ">=16.8"
   },
-  "packageManager": "pnpm@8.4.0",
+  "packageManager": "pnpm@9.1.0",
   "volta": {
     "node": "20.12.2",
-    "pnpm": "8.4.0"
+    "pnpm": "9.1.0"
   },
   "publishConfig": {
     "access": "public"
   },
   "authors": [
+    "Roc <moonlitusun@gmail.com>",
     "Peach <scdzwyxst@gmail.com>"
   ]
 }

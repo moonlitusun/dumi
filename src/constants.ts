@@ -39,7 +39,7 @@ export const DEFAULT_DEMO_PLAIN_TEXT_EXTENSIONS = [
   '.json',
 ];
 
-export const FS_CACHE_DIR = 'node_modules/.cache/dumi';
+export const FS_CACHE_DIR = 'node_modules/.cache/esboot/dumi';
 
 export const SHOULD_SKIP_LIVEDEMO_ERROR = [
   'Unable to find node on an unmounted component',
