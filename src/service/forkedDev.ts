@@ -9,10 +9,13 @@ setNoDeprecation();
 (async () => {
   try {
     const args = yParser(process.argv.slice(2));
-    const service = new DumiService();
+    console.log(args, 'args');
+    const { config, ...rest } = args;
+
+    const service = new DumiService({ configFile: args.config });
     await service.run2({
       name: DEV_COMMAND,
-      args,
+      args: rest,
     });
 
     let closed = false;

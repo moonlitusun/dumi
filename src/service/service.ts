@@ -8,10 +8,16 @@ function winJoin(...args: string[]) {
   return winPath(join(...args));
 }
 
+export interface DumiServiceOpts {
+  configFile?: string;
+}
+
 export class DumiService extends Service {
-  constructor() {
+  constructor(opts: DumiServiceOpts = {}) {
+    const { configFile } = opts;
+
     super({
-      defaultConfigFiles: DEFAULT_CONFIG_FILES,
+      defaultConfigFiles: [configFile, ...DEFAULT_CONFIG_FILES].filter(Boolean),
       frameworkName: FRAMEWORK_NAME,
     });
   }
