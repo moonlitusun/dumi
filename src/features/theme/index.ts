@@ -34,6 +34,7 @@ function getPkgThemeName(api: IApi) {
 
     return require(envThemePkgPath).name;
   }
+
   const validDeps = Object.assign(
     {},
     api.pkg.dependencies,

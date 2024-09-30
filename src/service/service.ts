@@ -25,7 +25,11 @@ export class DumiService extends Service {
   async getPaths() {
     const { cwd } = this;
     const tmp = this.env === Env.development ? `tmp` : `tmp-${this.env}`;
-    const absFWPath = winJoin(cwd, `.${FRAMEWORK_NAME}`);
+    const absFWPath = winJoin(
+      cwd,
+      '../node_modules/.cache/esboot/dumi',
+      `.${FRAMEWORK_NAME}`,
+    );
 
     // use .dumi as src dir for move all conventional files to .dumi
     // such as app.ts, global.ts, loading.tsx & etc.
